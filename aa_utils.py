@@ -41,14 +41,6 @@ def prog_bar_nh(progress, first_call = False):
             sys.stdout.write("\r\033[64C|           \n")
 
 
-# test prog_bar_nh
-for i in range(101):
-    time.sleep(0.1)
-    if i == 0:
-        prog_bar_nh(0.01 * i, True)
-    else:
-        prog_bar_nh(0.01 * i)
-        
 
         
 
@@ -82,4 +74,14 @@ def yaruo_kiri(statement):
     for i, l in enumerate(yaruo):
         print l
 
-# yaruo_kiri("hoge")
+
+if __name__ == "__main__":
+
+    # test prog_bar_nh
+    for i in range(101):
+        time.sleep(0.1)
+        if i == 0:
+            prog_bar_nh(0.01 * i, True)
+        else:
+            prog_bar_nh(0.01 * i)
+
