@@ -29,8 +29,6 @@ def prog_bar_nh(progress, first_call = False):
 
     prog_per = int(prog * 100)
 
-    # print "a\n\n \033[1A\rb"
-
     if not first_call:
         sys.stdout.write("\033[6A\r")
     for i, l in enumerate(nh):
@@ -72,7 +70,7 @@ def yaruo_kiri(statement):
              "    ヽ ＿＿＿＿(⌒)(⌒)⌒)  )    (⌒＿(⌒)⌒)⌒))"]
 
     for i, l in enumerate(yaruo):
-        print l
+        sys.stdout.write(l + '\n')
 
 
 if __name__ == "__main__":
