@@ -22,7 +22,6 @@ void progBarNh(const double progress, const bool first_call){
 
     
     std::string offset((int)(prog * 40), ' ');
-    std::string margin(40 - (int)(prog * 40), ' ');
 
     int prog_per = (int)(prog * 100);
 
@@ -31,7 +30,7 @@ void progBarNh(const double progress, const bool first_call){
     }
 
     for(int i = 0; i < 6; i++){
-        std::cout << "|" << offset << nh[i] << margin;
+        std::cout << "|" << offset << nh[i];
         if(i == 0){
             std::cout << "\r\033[64C| " << prog_per << " %          \n";
         }else{

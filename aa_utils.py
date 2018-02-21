@@ -25,14 +25,13 @@ def prog_bar_nh(progress, first_call = False):
           "   三    レﾚ                       "]
 
     offset = " " * int(prog * 40)
-    margin = " " * (40 - int(prog * 40))
 
     prog_per = int(prog * 100)
 
     if not first_call:
         sys.stdout.write("\033[6A\r")
     for i, l in enumerate(nh):
-        sys.stdout.write("|" + offset + l + margin)
+        sys.stdout.write("|" + offset + l)
         if i == 0:
             sys.stdout.write("\r\033[64C| " + str(prog_per) + " %          \n")
         else:
