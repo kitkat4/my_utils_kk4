@@ -43,10 +43,10 @@ RM = "C:/Program Files/cmake/bin/cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:/Users/kitkat/workspace/my_utils
+CMAKE_SOURCE_DIR = C:/Users/kitkat/workspace/my_utils_kk4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:/Users/kitkat/workspace/my_utils/build
+CMAKE_BINARY_DIR = C:/Users/kitkat/workspace/my_utils_kk4/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test_prog_bar_nh.dir/depend.make
@@ -60,16 +60,16 @@ include CMakeFiles/test_prog_bar_nh.dir/flags.make
 CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o: CMakeFiles/test_prog_bar_nh.dir/flags.make
 CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o: CMakeFiles/test_prog_bar_nh.dir/includes_CXX.rsp
 CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o: ../examples/test_prog_bar_nh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/kitkat/workspace/my_utils/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o"
-	C:/cygwin64/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o -c C:/Users/kitkat/workspace/my_utils/examples/test_prog_bar_nh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o"
+	C:/cygwin64/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o -c C:/Users/kitkat/workspace/my_utils_kk4/examples/test_prog_bar_nh.cpp
 
 CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.i"
-	C:/cygwin64/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/kitkat/workspace/my_utils/examples/test_prog_bar_nh.cpp > CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.i
+	C:/cygwin64/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/kitkat/workspace/my_utils_kk4/examples/test_prog_bar_nh.cpp > CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.i
 
 CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.s"
-	C:/cygwin64/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/kitkat/workspace/my_utils/examples/test_prog_bar_nh.cpp -o CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.s
+	C:/cygwin64/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/kitkat/workspace/my_utils_kk4/examples/test_prog_bar_nh.cpp -o CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.s
 
 CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o.requires:
 
@@ -92,7 +92,7 @@ test_prog_bar_nh_EXTERNAL_OBJECTS =
 test_prog_bar_nh.exe: CMakeFiles/test_prog_bar_nh.dir/examples/test_prog_bar_nh.cpp.o
 test_prog_bar_nh.exe: CMakeFiles/test_prog_bar_nh.dir/build.make
 test_prog_bar_nh.exe: CMakeFiles/test_prog_bar_nh.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/kitkat/workspace/my_utils/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_prog_bar_nh.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_prog_bar_nh.exe"
 	"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/test_prog_bar_nh.dir/objects.a
 	C:/cygwin64/bin/ar.exe cr CMakeFiles/test_prog_bar_nh.dir/objects.a @CMakeFiles/test_prog_bar_nh.dir/objects1.rsp
 	C:/cygwin64/bin/c++.exe     -Wl,--whole-archive CMakeFiles/test_prog_bar_nh.dir/objects.a -Wl,--no-whole-archive  -o test_prog_bar_nh.exe -Wl,--out-implib,libtest_prog_bar_nh.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
@@ -111,6 +111,6 @@ CMakeFiles/test_prog_bar_nh.dir/clean:
 .PHONY : CMakeFiles/test_prog_bar_nh.dir/clean
 
 CMakeFiles/test_prog_bar_nh.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Users/kitkat/workspace/my_utils C:/Users/kitkat/workspace/my_utils C:/Users/kitkat/workspace/my_utils/build C:/Users/kitkat/workspace/my_utils/build C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/test_prog_bar_nh.dir/DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" C:/Users/kitkat/workspace/my_utils_kk4 C:/Users/kitkat/workspace/my_utils_kk4 C:/Users/kitkat/workspace/my_utils_kk4/build C:/Users/kitkat/workspace/my_utils_kk4/build C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/test_prog_bar_nh.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test_prog_bar_nh.dir/depend
 

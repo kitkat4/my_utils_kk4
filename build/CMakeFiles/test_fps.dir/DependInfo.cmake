@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/kitkat/workspace/my_utils/examples/test_fps.cpp" "C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/test_fps.dir/examples/test_fps.cpp.o"
+  "C:/Users/kitkat/workspace/my_utils_kk4/examples/test_fps.cpp" "C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/test_fps.dir/examples/test_fps.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

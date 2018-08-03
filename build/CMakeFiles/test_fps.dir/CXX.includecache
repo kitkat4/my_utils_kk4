@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/my_utils_kk.hpp
+../include/my_utils_kk4.hpp
 chrono
 -
 string
@@ -14,9 +14,9 @@ string
 iostream
 -
 
-C:/Users/kitkat/workspace/my_utils/examples/test_fps.cpp
-my_utils_kk.hpp
-C:/Users/kitkat/workspace/my_utils/examples/my_utils_kk.hpp
+C:/Users/kitkat/workspace/my_utils_kk4/examples/test_fps.cpp
+my_utils_kk4.hpp
+C:/Users/kitkat/workspace/my_utils_kk4/examples/my_utils_kk4.hpp
 thread
 -
 

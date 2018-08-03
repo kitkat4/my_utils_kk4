@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 
-namespace my_utils_kk{
+namespace my_utils_kk4{
 
 void progBarNh(const double progress, const bool first_call);
 
@@ -35,7 +35,7 @@ private:
 
 
 // sources
-namespace my_utils_kk{
+namespace my_utils_kk4{
 
 void progBarNh(const double progress, const bool first_call){
 

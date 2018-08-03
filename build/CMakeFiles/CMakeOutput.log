@@ -10,61 +10,61 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
 
-The CXX compiler identification is GNU, found in "C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/3.5.1/CompilerIdCXX/a.exe"
+The CXX compiler identification is GNU, found in "C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/3.5.1/CompilerIdCXX/a.exe"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_d3832/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d3832.dir/build.make CMakeFiles/cmTC_d3832.dir/build
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります
-Building C object CMakeFiles/cmTC_d3832.dir/testCCompiler.c.obj
-C:/cygwin64/bin/cc     -o CMakeFiles/cmTC_d3832.dir/testCCompiler.c.obj   -c C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_d3832.exe
-C:/cygwin64/bin/cc       "CMakeFiles/cmTC_d3832.dir/testCCompiler.c.obj"   -o cmTC_d3832.exe  
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' から出ます
+Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_de8c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_de8c4.dir/build.make CMakeFiles/cmTC_de8c4.dir/build
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります
+Building C object CMakeFiles/cmTC_de8c4.dir/testCCompiler.c.obj
+C:/cygwin64/bin/cc     -o CMakeFiles/cmTC_de8c4.dir/testCCompiler.c.obj   -c C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_de8c4.exe
+C:/cygwin64/bin/cc       "CMakeFiles/cmTC_de8c4.dir/testCCompiler.c.obj"   -o cmTC_de8c4.exe  
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' から出ます
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_8bb63/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8bb63.dir/build.make CMakeFiles/cmTC_8bb63.dir/build
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります
-Building C object CMakeFiles/cmTC_8bb63.dir/CMakeCCompilerABI.c.obj
-C:/cygwin64/bin/cc     -o CMakeFiles/cmTC_8bb63.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/cmake/share/cmake-3.5/Modules/CMakeCCompilerABI.c"
-Linking C executable cmTC_8bb63.exe
-C:/cygwin64/bin/cc       "CMakeFiles/cmTC_8bb63.dir/CMakeCCompilerABI.c.obj"   -o cmTC_8bb63.exe   
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' から出ます
+Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_c616f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c616f.dir/build.make CMakeFiles/cmTC_c616f.dir/build
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります
+Building C object CMakeFiles/cmTC_c616f.dir/CMakeCCompilerABI.c.obj
+C:/cygwin64/bin/cc     -o CMakeFiles/cmTC_c616f.dir/CMakeCCompilerABI.c.obj   -c "C:/Program Files/cmake/share/cmake-3.5/Modules/CMakeCCompilerABI.c"
+Linking C executable cmTC_c616f.exe
+C:/cygwin64/bin/cc       "CMakeFiles/cmTC_c616f.dir/CMakeCCompilerABI.c.obj"   -o cmTC_c616f.exe   
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' から出ます
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_3b859/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3b859.dir/build.make CMakeFiles/cmTC_3b859.dir/build
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります
-Building CXX object CMakeFiles/cmTC_3b859.dir/testCXXCompiler.cxx.o
-C:/cygwin64/bin/c++.exe      -o CMakeFiles/cmTC_3b859.dir/testCXXCompiler.cxx.o -c C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_3b859.exe
-"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_3b859.dir/objects.a
-C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_3b859.dir/objects.a @CMakeFiles/cmTC_3b859.dir/objects1.rsp
-C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_3b859.dir/objects.a -Wl,--no-whole-archive  -o cmTC_3b859.exe -Wl,--out-implib,libcmTC_3b859.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' から出ます
+Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_eaa16/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eaa16.dir/build.make CMakeFiles/cmTC_eaa16.dir/build
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります
+Building CXX object CMakeFiles/cmTC_eaa16.dir/testCXXCompiler.cxx.o
+C:/cygwin64/bin/c++.exe      -o CMakeFiles/cmTC_eaa16.dir/testCXXCompiler.cxx.o -c C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_eaa16.exe
+"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_eaa16.dir/objects.a
+C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_eaa16.dir/objects.a @CMakeFiles/cmTC_eaa16.dir/objects1.rsp
+C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_eaa16.dir/objects.a -Wl,--no-whole-archive  -o cmTC_eaa16.exe -Wl,--out-implib,libcmTC_eaa16.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' から出ます
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_6de0b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6de0b.dir/build.make CMakeFiles/cmTC_6de0b.dir/build
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります
-Building CXX object CMakeFiles/cmTC_6de0b.dir/CMakeCXXCompilerABI.cpp.o
-C:/cygwin64/bin/c++.exe      -o CMakeFiles/cmTC_6de0b.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/cmake/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp"
-Linking CXX executable cmTC_6de0b.exe
-"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_6de0b.dir/objects.a
-C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_6de0b.dir/objects.a @CMakeFiles/cmTC_6de0b.dir/objects1.rsp
-C:/cygwin64/bin/c++.exe      -v -Wl,--whole-archive CMakeFiles/cmTC_6de0b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6de0b.exe -Wl,--out-implib,libcmTC_6de0b.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
+Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_6ce97/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6ce97.dir/build.make CMakeFiles/cmTC_6ce97.dir/build
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります
+Building CXX object CMakeFiles/cmTC_6ce97.dir/CMakeCXXCompilerABI.cpp.o
+C:/cygwin64/bin/c++.exe      -o CMakeFiles/cmTC_6ce97.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/cmake/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp"
+Linking CXX executable cmTC_6ce97.exe
+"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_6ce97.dir/objects.a
+C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_6ce97.dir/objects.a @CMakeFiles/cmTC_6ce97.dir/objects1.rsp
+C:/cygwin64/bin/c++.exe      -v -Wl,--whole-archive CMakeFiles/cmTC_6ce97.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6ce97.exe -Wl,--out-implib,libcmTC_6ce97.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
 組み込み spec を使用しています。
 COLLECT_GCC=C:/cygwin64/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/lto-wrapper.exe
@@ -74,25 +74,25 @@ configure 設定: /cygdrive/i/szsz/tmpp/gcc/gcc-7.3.0-2.x86_64/src/gcc-7.3.0/con
 gcc バージョン 7.3.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/bin/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6de0b.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/cyglto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/tmp/cc8yVUFP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lcygwin -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=cyg --tsaware -o cmTC_6de0b.exe /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0 -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../.. --whole-archive CMakeFiles/cmTC_6de0b.dir/objects.a --no-whole-archive --out-implib libcmTC_6de0b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lcygwin -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6de0b.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' から出ます
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6ce97.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/cyglto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/tmp/cc65nudk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lcygwin -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=cyg --tsaware -o cmTC_6ce97.exe /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0 -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../.. --whole-archive CMakeFiles/cmTC_6ce97.dir/objects.a --no-whole-archive --out-implib libcmTC_6ce97.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lcygwin -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6ce97.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' から出ます
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_6de0b/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6de0b.dir/build.make CMakeFiles/cmTC_6de0b.dir/build]
-  ignore line: [make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります]
-  ignore line: [Building CXX object CMakeFiles/cmTC_6de0b.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [C:/cygwin64/bin/c++.exe      -o CMakeFiles/cmTC_6de0b.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/cmake/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp"]
-  ignore line: [Linking CXX executable cmTC_6de0b.exe]
-  ignore line: ["C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_6de0b.dir/objects.a]
-  ignore line: [C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_6de0b.dir/objects.a @CMakeFiles/cmTC_6de0b.dir/objects1.rsp]
-  ignore line: [C:/cygwin64/bin/c++.exe      -v -Wl,--whole-archive CMakeFiles/cmTC_6de0b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6de0b.exe -Wl,--out-implib,libcmTC_6de0b.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
+  ignore line: [Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_6ce97/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_6ce97.dir/build.make CMakeFiles/cmTC_6ce97.dir/build]
+  ignore line: [make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります]
+  ignore line: [Building CXX object CMakeFiles/cmTC_6ce97.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [C:/cygwin64/bin/c++.exe      -o CMakeFiles/cmTC_6ce97.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/cmake/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX executable cmTC_6ce97.exe]
+  ignore line: ["C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_6ce97.dir/objects.a]
+  ignore line: [C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_6ce97.dir/objects.a @CMakeFiles/cmTC_6ce97.dir/objects1.rsp]
+  ignore line: [C:/cygwin64/bin/c++.exe      -v -Wl,--whole-archive CMakeFiles/cmTC_6ce97.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6ce97.exe -Wl,--out-implib,libcmTC_6ce97.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
   ignore line: [組み込み spec を使用しています。]
   ignore line: [COLLECT_GCC=C:/cygwin64/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/lto-wrapper.exe]
@@ -102,13 +102,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc バージョン 7.3.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/bin/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/:/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6de0b.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/cyglto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/tmp/cc8yVUFP.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lcygwin -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=cyg --tsaware -o cmTC_6de0b.exe /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0 -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../.. --whole-archive CMakeFiles/cmTC_6de0b.dir/objects.a --no-whole-archive --out-implib libcmTC_6de0b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lcygwin -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6ce97.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/collect2.exe -plugin /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/cyglto_plugin.dll -plugin-opt=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/lto-wrapper.exe -plugin-opt=-fresolution=/tmp/cc65nudk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lcygwin -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=cyg --tsaware -o cmTC_6ce97.exe /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtbegin.o -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0 -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib -L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../.. --whole-archive CMakeFiles/cmTC_6ce97.dir/objects.a --no-whole-archive --out-implib libcmTC_6ce97.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lgcc_s -lgcc -lcygwin -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtend.o]
     arg [/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/cyglto_plugin.dll] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc8yVUFP.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc65nudk.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lcygwin] ==> ignore
@@ -141,7 +141,7 @@ Parsed CXX implicit link information from above output:
     arg [--dll-search-prefix=cyg] ==> ignore
     arg [--tsaware] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_6de0b.exe] ==> ignore
+    arg [cmTC_6ce97.exe] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/crt0.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/crtbegin.o] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0] ==> dir [/usr/lib/gcc/x86_64-pc-cygwin/7.3.0]
@@ -152,10 +152,10 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib] ==> dir [/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../x86_64-pc-cygwin/lib]
     arg [-L/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles/cmTC_6de0b.dir/objects.a] ==> ignore
+    arg [CMakeFiles/cmTC_6ce97.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_6de0b.dll.a] ==> ignore
+    arg [libcmTC_6ce97.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -191,18 +191,18 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_9339d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9339d.dir/build.make CMakeFiles/cmTC_9339d.dir/build
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります
-Building CXX object CMakeFiles/cmTC_9339d.dir/feature_tests.cxx.o
-C:/cygwin64/bin/c++.exe     -std=c++14 -o CMakeFiles/cmTC_9339d.dir/feature_tests.cxx.o -c C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_9339d.exe
-"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_9339d.dir/objects.a
-C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_9339d.dir/objects.a @CMakeFiles/cmTC_9339d.dir/objects1.rsp
-C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_9339d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_9339d.exe -Wl,--out-implib,libcmTC_9339d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' から出ます
+Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_2aaa9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2aaa9.dir/build.make CMakeFiles/cmTC_2aaa9.dir/build
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります
+Building CXX object CMakeFiles/cmTC_2aaa9.dir/feature_tests.cxx.o
+C:/cygwin64/bin/c++.exe     -std=c++14 -o CMakeFiles/cmTC_2aaa9.dir/feature_tests.cxx.o -c C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2aaa9.exe
+"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_2aaa9.dir/objects.a
+C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_2aaa9.dir/objects.a @CMakeFiles/cmTC_2aaa9.dir/objects1.rsp
+C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_2aaa9.dir/objects.a -Wl,--no-whole-archive  -o cmTC_2aaa9.exe -Wl,--out-implib,libcmTC_2aaa9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' から出ます
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -265,18 +265,18 @@ make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/C
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_c4d9c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c4d9c.dir/build.make CMakeFiles/cmTC_c4d9c.dir/build
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります
-Building CXX object CMakeFiles/cmTC_c4d9c.dir/feature_tests.cxx.o
-C:/cygwin64/bin/c++.exe     -std=c++11 -o CMakeFiles/cmTC_c4d9c.dir/feature_tests.cxx.o -c C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c4d9c.exe
-"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_c4d9c.dir/objects.a
-C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_c4d9c.dir/objects.a @CMakeFiles/cmTC_c4d9c.dir/objects1.rsp
-C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_c4d9c.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c4d9c.exe -Wl,--out-implib,libcmTC_c4d9c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' から出ます
+Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_d73a9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d73a9.dir/build.make CMakeFiles/cmTC_d73a9.dir/build
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります
+Building CXX object CMakeFiles/cmTC_d73a9.dir/feature_tests.cxx.o
+C:/cygwin64/bin/c++.exe     -std=c++11 -o CMakeFiles/cmTC_d73a9.dir/feature_tests.cxx.o -c C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d73a9.exe
+"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_d73a9.dir/objects.a
+C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_d73a9.dir/objects.a @CMakeFiles/cmTC_d73a9.dir/objects1.rsp
+C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_d73a9.dir/objects.a -Wl,--no-whole-archive  -o cmTC_d73a9.exe -Wl,--out-implib,libcmTC_d73a9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' から出ます
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -339,18 +339,18 @@ make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/C
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_c6724/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c6724.dir/build.make CMakeFiles/cmTC_c6724.dir/build
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' に入ります
-Building CXX object CMakeFiles/cmTC_c6724.dir/feature_tests.cxx.o
-C:/cygwin64/bin/c++.exe     -std=c++98 -o CMakeFiles/cmTC_c6724.dir/feature_tests.cxx.o -c C:/Users/kitkat/workspace/my_utils/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c6724.exe
-"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_c6724.dir/objects.a
-C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_c6724.dir/objects.a @CMakeFiles/cmTC_c6724.dir/objects1.rsp
-C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_c6724.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c6724.exe -Wl,--out-implib,libcmTC_c6724.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
-make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils/build/CMakeFiles/CMakeTmp' から出ます
+Run Build Command:"C:/cygwin64/bin/make.exe" "cmTC_800ac/fast"
+/usr/bin/make -f CMakeFiles/cmTC_800ac.dir/build.make CMakeFiles/cmTC_800ac.dir/build
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' に入ります
+Building CXX object CMakeFiles/cmTC_800ac.dir/feature_tests.cxx.o
+C:/cygwin64/bin/c++.exe     -std=c++98 -o CMakeFiles/cmTC_800ac.dir/feature_tests.cxx.o -c C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_800ac.exe
+"C:/Program Files/cmake/bin/cmake.exe" -E remove -f CMakeFiles/cmTC_800ac.dir/objects.a
+C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_800ac.dir/objects.a @CMakeFiles/cmTC_800ac.dir/objects1.rsp
+C:/cygwin64/bin/c++.exe       -Wl,--whole-archive CMakeFiles/cmTC_800ac.dir/objects.a -Wl,--no-whole-archive  -o cmTC_800ac.exe -Wl,--out-implib,libcmTC_800ac.dll.a -Wl,--major-image-version,0,--minor-image-version,0  
+make[1]: ディレクトリ '/cygdrive/c/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/CMakeTmp' から出ます
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
