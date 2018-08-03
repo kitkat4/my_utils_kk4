@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(my_utils_kk)
+
+# 次の行を追加するとDebug, MinSizeRel, RelWithDebInfoの選択肢を生成することが抑制できます。
+set(CMAKE_CONFIGURATION_TYPES "Release" CACHE STRING "limited configs" FORCE)
+set(CMAKE_SUPPRESS_REGENERATION)
+set(CMAKE_CXX_STANDARD 11)
+include_directories(include)
+
+add_executable(test_prog_bar_nh examples/test_prog_bar_nh.cpp)
+add_executable(test_fps examples/test_fps.cpp)
+
+
+

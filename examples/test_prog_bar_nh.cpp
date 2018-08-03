@@ -1,6 +1,5 @@
+#include "my_utils_kk.hpp"
 
-
-void progBarNh(const double progress, const bool first_call);
 
 int main(){
 
@@ -9,9 +8,9 @@ int main(){
             // do nothing
         }
         if(i == 0){
-            progBarNh(0.01 * i, true);
+            my_utils_kk::progBarNh(0.01 * i, true);
         }else{
-            progBarNh(0.01 * i, false);
+            my_utils_kk::progBarNh(0.01 * i, false);
         }
     }
 }    

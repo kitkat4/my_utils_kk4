@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/my_utils_kk.hpp
+chrono
+-
+string
+-
+iostream
+-
+
+C:/Users/kitkat/workspace/my_utils/examples/test_prog_bar_nh.cpp
+my_utils_kk.hpp
+C:/Users/kitkat/workspace/my_utils/examples/my_utils_kk.hpp
+
