@@ -124,6 +124,19 @@ test_prog_bar_nh/fast:
 .PHONY : test_prog_bar_nh/fast
 
 #=============================================================================
+# Target rules for targets named test_color
+
+# Build rule for target.
+test_color: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_color
+.PHONY : test_color
+
+# fast build rule for target.
+test_color/fast:
+	$(MAKE) -f CMakeFiles/test_color.dir/build.make CMakeFiles/test_color.dir/build
+.PHONY : test_color/fast
+
+#=============================================================================
 # Target rules for targets named test_fps
 
 # Build rule for target.
@@ -135,6 +148,33 @@ test_fps: cmake_check_build_system
 test_fps/fast:
 	$(MAKE) -f CMakeFiles/test_fps.dir/build.make CMakeFiles/test_fps.dir/build
 .PHONY : test_fps/fast
+
+examples/test_color.o: examples/test_color.cpp.o
+
+.PHONY : examples/test_color.o
+
+# target to build an object file
+examples/test_color.cpp.o:
+	$(MAKE) -f CMakeFiles/test_color.dir/build.make CMakeFiles/test_color.dir/examples/test_color.cpp.o
+.PHONY : examples/test_color.cpp.o
+
+examples/test_color.i: examples/test_color.cpp.i
+
+.PHONY : examples/test_color.i
+
+# target to preprocess a source file
+examples/test_color.cpp.i:
+	$(MAKE) -f CMakeFiles/test_color.dir/build.make CMakeFiles/test_color.dir/examples/test_color.cpp.i
+.PHONY : examples/test_color.cpp.i
+
+examples/test_color.s: examples/test_color.cpp.s
+
+.PHONY : examples/test_color.s
+
+# target to generate assembly for a file
+examples/test_color.cpp.s:
+	$(MAKE) -f CMakeFiles/test_color.dir/build.make CMakeFiles/test_color.dir/examples/test_color.cpp.s
+.PHONY : examples/test_color.cpp.s
 
 examples/test_fps.o: examples/test_fps.cpp.o
 
@@ -197,9 +237,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... test_prog_bar_nh"
+	@echo "... test_color"
 	@echo "... test_fps"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... examples/test_color.o"
+	@echo "... examples/test_color.i"
+	@echo "... examples/test_color.s"
 	@echo "... examples/test_fps.o"
 	@echo "... examples/test_fps.i"
 	@echo "... examples/test_fps.s"

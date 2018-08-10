@@ -1,4 +1,5 @@
 C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/test_prog_bar_nh.dir
+C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/test_color.dir
 C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/test_fps.dir
 C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/edit_cache.dir
 C:/Users/kitkat/workspace/my_utils_kk4/build/CMakeFiles/rebuild_cache.dir

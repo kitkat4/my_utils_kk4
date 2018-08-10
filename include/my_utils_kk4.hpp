@@ -6,6 +6,28 @@
 
 namespace my_utils_kk4{
 
+
+std::string black   = "\033[30m";
+std::string red     = "\033[31m";
+std::string green   = "\033[32m";
+std::string yellow  = "\033[33m";
+std::string blue    = "\033[34m";
+std::string magenta = "\033[35m";
+std::string cyan    = "\033[36m";
+std::string white   = "\033[37m";
+std::string default_color  = "\033[39m";
+std::string black_b   = "\033[40m";
+std::string red_b     = "\033[41m";
+std::string green_b   = "\033[42m";
+std::string yellow_b  = "\033[43m";
+std::string blue_b    = "\033[44m";
+std::string magenta_b = "\033[45m";
+std::string cyan_b    = "\033[46m";
+std::string white_b   = "\033[47m";
+std::string default_color_b  = "\033[49m";
+
+
+
 void progBarNh(const double progress, const bool first_call);
 
 
