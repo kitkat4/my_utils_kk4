@@ -4,6 +4,30 @@ import sys
 
 import time
 
+
+
+
+black   = "\033[30m"
+red     = "\033[31m"
+green   = "\033[32m"
+yellow  = "\033[33m"
+blue    = "\033[34m"
+magenta = "\033[35m"
+cyan    = "\033[36m"
+white   = "\033[37m"
+default_color  = "\033[39m"
+black_b   = "\033[40m"
+red_b     = "\033[41m"
+green_b   = "\033[42m"
+yellow_b  = "\033[43m"
+blue_b    = "\033[44m"
+magenta_b = "\033[45m"
+cyan_b    = "\033[46m"
+white_b   = "\033[47m"
+default_color_b  = "\033[49m"
+
+
+
 # progress bar with Naitou Horizon.
 # progress: float, in [0.0, 1.0]
 def prog_bar_nh(progress, first_call = False):
