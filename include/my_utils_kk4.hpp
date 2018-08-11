@@ -48,12 +48,26 @@ private:
     double fps;
 };
 
+
+class StopWatch{
+public:
+    StopWatch();
+    ~StopWatch();
+    void start();
+    double stop();
+    void reset();
+    double lap();
+private:
+    bool measuring;
+    std::chrono::system_clock::time_point time_start;
+    std::chrono::microseconds offset;
+
+};
+
+
+
+
 }
-
-
-
-
-
 
 
 // sources
@@ -140,5 +154,53 @@ void Fps::informEvent(){
 }
 
 
+StopWatch::StopWatch()
+    : measuring(false),
+      offset(std::chrono::microseconds(0))
+{}
+
+StopWatch::~StopWatch(){}
+
+
+void StopWatch::start(){
+    if(! measuring){
+        measuring = true;
+        time_start = std::chrono::system_clock::now();
+    }else
+        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::start() called while already running" << std::endl;
 }
+
+double StopWatch::stop(){
+    if(measuring){
+        auto elapsed = std::chrono::system_clock::now() - time_start;
+        auto result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
+        offset = result;
+        measuring = false;
+        return result.count() / (double) 1000000;
+    }else
+        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::stop() called while not running" << std::endl;
+}
+
+
+
+void StopWatch::reset(){
+    if(! measuring)
+        offset = std::chrono::microseconds(0);
+    else
+        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::reset() called while running" << std::endl;
+}
+
+double StopWatch::lap(){
+    if(measuring){
+        auto elapsed = std::chrono::system_clock::now() - time_start;
+        auto result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
+        return result.count() / (double) 1000000;
+    }else
+        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::lap() called while not running" << std::endl;
+    return 0;
+}
+
+
+}
+
 
