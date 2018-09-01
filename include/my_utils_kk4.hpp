@@ -7,24 +7,24 @@
 namespace my_utils_kk4{
 
 
-std::string black   = "\033[30m";
-std::string red     = "\033[31m";
-std::string green   = "\033[32m";
-std::string yellow  = "\033[33m";
-std::string blue    = "\033[34m";
-std::string magenta = "\033[35m";
-std::string cyan    = "\033[36m";
-std::string white   = "\033[37m";
-std::string default_color  = "\033[39m";
-std::string black_b   = "\033[40m";
-std::string red_b     = "\033[41m";
-std::string green_b   = "\033[42m";
-std::string yellow_b  = "\033[43m";
-std::string blue_b    = "\033[44m";
-std::string magenta_b = "\033[45m";
-std::string cyan_b    = "\033[46m";
-std::string white_b   = "\033[47m";
-std::string default_color_b  = "\033[49m";
+static const std::string black   = "\033[30m";
+static const std::string red     = "\033[31m";
+static const std::string green   = "\033[32m";
+static const std::string yellow  = "\033[33m";
+static const std::string blue    = "\033[34m";
+static const std::string magenta = "\033[35m";
+static const std::string cyan    = "\033[36m";
+static const std::string white   = "\033[37m";
+static const std::string default_color  = "\033[39m";
+static const std::string black_b   = "\033[40m";
+static const std::string red_b     = "\033[41m";
+static const std::string green_b   = "\033[42m";
+static const std::string yellow_b  = "\033[43m";
+static const std::string blue_b    = "\033[44m";
+static const std::string magenta_b = "\033[45m";
+static const std::string cyan_b    = "\033[46m";
+static const std::string white_b   = "\033[47m";
+static const std::string default_color_b  = "\033[49m";
 
 
 
@@ -73,7 +73,7 @@ private:
 // sources
 namespace my_utils_kk4{
 
-void progBarNh(const double progress, const bool first_call){
+inline void progBarNh(const double progress, const bool first_call){
 
     double prog;
     if(progress < 0.0){
@@ -114,7 +114,7 @@ void progBarNh(const double progress, const bool first_call){
 }
 
 // Constructor
-Fps::Fps(double update_interval)
+inline Fps::Fps(double update_interval)
     : no_events_yet(true),
       events_num_after_last_update(0),
       elapsed_time_after_last_update(std::chrono::microseconds(0)),
@@ -123,11 +123,11 @@ Fps::Fps(double update_interval)
 }
 
 // Destructor
-Fps::~Fps(){
+inline Fps::~Fps(){
 }
 
 
-void Fps::informEvent(){
+inline void Fps::informEvent(){
 
     
     if(no_events_yet){          // fist call
@@ -154,15 +154,15 @@ void Fps::informEvent(){
 }
 
 
-StopWatch::StopWatch()
+inline StopWatch::StopWatch()
     : measuring(false),
       offset(std::chrono::microseconds(0))
 {}
 
-StopWatch::~StopWatch(){}
+inline StopWatch::~StopWatch(){}
 
 
-void StopWatch::start(){
+inline void StopWatch::start(){
     if(! measuring){
         measuring = true;
         time_start = std::chrono::system_clock::now();
@@ -170,7 +170,7 @@ void StopWatch::start(){
         std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::start() called while already running" << std::endl;
 }
 
-double StopWatch::stop(){
+inline double StopWatch::stop(){
     if(measuring){
         auto elapsed = std::chrono::system_clock::now() - time_start;
         auto result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
@@ -183,14 +183,14 @@ double StopWatch::stop(){
 
 
 
-void StopWatch::reset(){
+inline void StopWatch::reset(){
     if(! measuring)
         offset = std::chrono::microseconds(0);
     else
         std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::reset() called while running" << std::endl;
 }
 
-double StopWatch::lap(){
+inline double StopWatch::lap(){
     if(measuring){
         auto elapsed = std::chrono::system_clock::now() - time_start;
         auto result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
