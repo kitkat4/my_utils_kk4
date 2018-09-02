@@ -2,3 +2,4 @@
 *~
 *.exe
 build
+*.pyc

@@ -27,6 +27,40 @@ white_b   = "\033[47m"
 default_color_b  = "\033[49m"
 
 
+class Fps:
+    
+    def __init__(self, update_interval = 1.0):
+
+        self.no_events_yet = True
+        self.events_num_after_last_update = 0
+        self.elapsed_time_after_last_update = 0.0
+        self.update_interval = update_interval
+        self.fps = 0.0
+        self.time_of_last_event = 0.0
+        
+
+    def inform_event(self):
+
+        if self.no_events_yet:
+            self.no_events_yet = False
+            self.time_of_last_event = time.time()
+        else:
+            now = time.time()
+            self.elapsed_time_after_last_update += now - self.time_of_last_event
+            self.time_of_last_event = now
+            self.events_num_after_last_update += 1
+            
+        if self.elapsed_time_after_last_update > self.update_interval:
+            self.fps = self.events_num_after_last_update / self.elapsed_time_after_last_update
+            self.elapsed_time_after_last_update = 0.0
+            self.events_num_after_last_update = 0
+
+        return
+
+    def get_fps(self):
+        
+        return self.fps
+
 
 # progress bar with Naitou Horizon.
 # progress: float, in [0.0, 1.0]
@@ -94,6 +128,8 @@ def yaruo_kiri(statement):
 
     for i, l in enumerate(yaruo):
         sys.stdout.write(l + '\n')
+
+
 
 
 if __name__ == "__main__":
