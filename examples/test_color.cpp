@@ -5,6 +5,10 @@
 
 int main(){
 
+    std::cout << my_utils_kk4::bold << "bold" << my_utils_kk4::default_style << std::endl
+              << my_utils_kk4::italic << "italic" << my_utils_kk4::default_style << std::endl
+              << my_utils_kk4::underline << "underline" << my_utils_kk4::default_style << std::endl;
+    
     std::cout << my_utils_kk4::default_color << "default_color" << std::endl
               << my_utils_kk4::black << "black" << std::endl
               << my_utils_kk4::white << "white" << std::endl
@@ -14,7 +18,8 @@ int main(){
               << my_utils_kk4::blue << "blue" << std::endl
               << my_utils_kk4::magenta << "magenta" << std::endl
               << my_utils_kk4::cyan << "cyan" << std::endl
-              << my_utils_kk4::default_color << "default_color" << std::endl;
+              << my_utils_kk4::bold << my_utils_kk4::green << "bold green" << std::endl
+              << my_utils_kk4::default_style << "default_style" << std::endl;
 
 
     std::cout << my_utils_kk4::default_color_b << "default_color_b" << std::endl

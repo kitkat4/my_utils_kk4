@@ -5,7 +5,10 @@ import sys
 import time
 
 
-
+default_style = "\033[0m"; 
+bold    = "\033[1m";
+italic  = "\033[3m";
+underline = "\033[4m";
 
 black   = "\033[30m"
 red     = "\033[31m"

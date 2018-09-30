@@ -7,6 +7,11 @@
 namespace my_utils_kk4{
 
 
+static const std::string default_style = "\033[0m"; 
+static const std::string bold    = "\033[1m";
+static const std::string italic  = "\033[3m";
+static const std::string underline = "\033[4m";
+
 static const std::string black   = "\033[30m";
 static const std::string red     = "\033[31m";
 static const std::string green   = "\033[32m";
