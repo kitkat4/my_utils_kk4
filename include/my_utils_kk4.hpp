@@ -120,9 +120,9 @@ inline void progBarNh(const double progress, const bool first_call){
 
 // Constructor
 inline Fps::Fps(double update_interval)
-    : no_events_yet(true),
+    : elapsed_time_after_last_update(std::chrono::microseconds(0)),
       events_num_after_last_update(0),
-      elapsed_time_after_last_update(std::chrono::microseconds(0)),
+      no_events_yet(true),
       update_interval((int)(update_interval * 1000000)),
       fps(0.0){
 }
