@@ -65,6 +65,39 @@ class Fps:
         return self.fps
 
 
+# Detect a header line in text files like CSV files.
+# This function tries to convert fields in the first two lines to float.
+# If the patterns of success and failure of conversion in the lines are uniform,
+# this function assumes that the file does not have a header line and returns False,
+# otherwise True.
+# 
+# fname: input text file, typically CSV.
+# delimiter: character used to split the lines.
+# return: True if a header line is detected, otherwise False.
+def has_header(fname, delimiter=','):
+
+    patterns = [[], []]
+    
+    with open(fname, 'r') as f:
+        for i in range(2):
+            line = f.readline()
+            fields = line.split(delimiter)
+            for x in fields:
+                try:
+                    dummy = float(x)
+                    patterns[i].append(True)
+                except ValueError:
+                    patterns[i].append(False)
+
+    for p0, p1 in zip(patterns[0], patterns[1]):
+        if p0 != p1:
+            return True
+
+    return False
+                    
+        
+
+
 # progress bar with Naitou Horizon.
 # progress: float, in [0.0, 1.0]
 def prog_bar_nh(progress, first_call = False):
