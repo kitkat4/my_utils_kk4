@@ -62,10 +62,12 @@ public:
     double stop();
     void reset();
     double lap();
+    double getResult();
 private:
     bool measuring;
     std::chrono::system_clock::time_point time_start;
     std::chrono::microseconds offset;
+    double result;
 
 };
 
@@ -178,10 +180,11 @@ inline void StopWatch::start(){
 inline double StopWatch::stop(){
     if(measuring){
         auto elapsed = std::chrono::system_clock::now() - time_start;
-        auto result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
-        offset = result;
+        auto tmp_result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
+        offset = tmp_result;
         measuring = false;
-        return result.count() / (double) 1000000;
+        result = tmp_result.count() / (double) 1000000;
+        return result;
     }else
         std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::stop() called while not running" << std::endl;
 }
@@ -198,11 +201,17 @@ inline void StopWatch::reset(){
 inline double StopWatch::lap(){
     if(measuring){
         auto elapsed = std::chrono::system_clock::now() - time_start;
-        auto result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
-        return result.count() / (double) 1000000;
+        auto tmp_result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
+        result = tmp_result.count() / (double) 1000000;
+        return result;
     }else
         std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::lap() called while not running" << std::endl;
     return 0;
+}
+
+inline double StopWatch::getResult(){
+
+    return result;
 }
 
 
