@@ -40,7 +40,7 @@ class Fps{
 public:
     Fps(double update_interval = 1);
     ~Fps();
-    void informEvent();
+    void trigger();
     double getFps()const{
         return fps;
     }
@@ -134,7 +134,7 @@ inline Fps::~Fps(){
 }
 
 
-inline void Fps::informEvent(){
+inline void Fps::trigger(){
 
     
     if(no_events_yet){          // fist call

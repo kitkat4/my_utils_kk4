@@ -42,7 +42,7 @@ class Fps:
         self.time_of_last_event = 0.0
         
 
-    def inform_event(self):
+    def trigger(self):
 
         if self.no_events_yet:
             self.no_events_yet = False
