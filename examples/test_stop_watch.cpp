@@ -12,7 +12,7 @@ int main(){
 
         std::string buf;
 
-        std::cout << "1: start  2: stop  3: lap  4: reset  5: break" << std::endl;
+        std::cout << "1: start  2: stop  3: lap  4: interval  5: reset  6: break" << std::endl;
 
         std::cin >> buf;
 
@@ -24,9 +24,11 @@ int main(){
         }else if(buf == "3"){
             std::cout << "lap: " << sw.lap() << std::endl;
         }else if(buf == "4"){
+            std::cout << "interval: " << sw.interval() << std::endl;
+        }else if(buf == "5"){
             sw.reset();
             std::cout << "reset" << std::endl;
-        }else if(buf == "5"){
+        }else if(buf == "6"){
             std::cout << "break" << std::endl;
             break;
         }else{

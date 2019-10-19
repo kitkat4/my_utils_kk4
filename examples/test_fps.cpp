@@ -11,7 +11,7 @@ int main(){
 
     for(int i = 0; i < 100000; i++){
 
-        fps.informEvent();
+        fps.trigger();
 
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         
