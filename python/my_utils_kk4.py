@@ -95,7 +95,47 @@ def has_header(fname, delimiter=','):
 
     return False
                     
-        
+
+# Extract the header line as the list of strings.
+# If no header line is detected, returns None.
+def get_header(fname, delimiter=','):
+
+    patterns = [[], []]
+    lines = []
+    fields = []
+    
+    with open(fname, 'r') as f:
+        for i in range(2):
+            lines.append(f.readline())
+            fields.append(lines[i].split(delimiter))
+            for x in fields[i]:
+                try:
+                    dummy = float(x)
+                    patterns[i].append(True)
+                except ValueError:
+                    patterns[i].append(False)
+
+    for p0, p1 in zip(patterns[0], patterns[1]):
+        if p0 != p1:
+
+            header = fields[0]
+
+            # remove new line character from the back of the last field
+            nl = header[-1].rfind('\n')
+            if nl != -1:
+                header[-1] = header[-1][:-1]
+
+            # remove spaces and tabs from the front and back of each field
+            for i in range(len(header)):
+                while header[i].find(' ') == 0 or header[i].find('\t') == 0:
+                   header[i] = header[i][1:]
+                while header[i].find(' ') == len(header[i])-1 or \
+                      header[i].find('\t') == len(header[i])-1:
+                    header[i] = header[i][:-1]
+                
+            return header
+
+    return None
 
 
 # progress bar with Naitou Horizon.
