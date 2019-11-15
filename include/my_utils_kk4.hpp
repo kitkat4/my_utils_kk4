@@ -1,6 +1,7 @@
 #pragma once
 
 #include <chrono>
+#include <time.h>
 #include <string>
 #include <iostream>
 
@@ -56,30 +57,52 @@ private:
 
 class StopWatch{
 public:
-    StopWatch();
-    ~StopWatch();
-    void start();
-    double stop();
-    void reset();
-    double lap();
-    double interval();
-    double getResult()const;
-private:
-    bool measuring;
-    std::chrono::system_clock::time_point time_start;
-    std::chrono::microseconds offset;
-    double result;
 
+    typedef enum{
+        LINUX_CLOCK_GETTIME,
+        CHRONO_HIGH_RESOLUTION_CLOCK,
+        CHRONO_STEADY_CLOCK
+    }Mode;
+    
+    StopWatch(const bool verbose = false);
+    ~StopWatch();
+    
+    void start();
+    
+    double stop();
+    timespec stopTimespec();
+    
+    void reset();
+    
+    double lap();
+    timespec lapTimespec();
+    
+    double interval();
+    timespec intervalTimespec();
+    
+    double getResult()const;
+    timespec getResultTimespec()const;
+    
+private:
+    static struct timespec sub(const struct timespec& a, const struct timespec& b);
+    static struct timespec add(const struct timespec& a, const struct timespec& b);
+    static double toSec(const struct timespec& t);
+    
+#if defined(linux) || defined(__linux) || defined(__linux__)
+    struct timespec time_start;
+    struct timespec offset;
+#else
+    std::chrono::high_resolution_clock::time_point time_start_high_res;
+    std::chrono::steady_clock::time_point time_start;
+    std::chrono::nanoseconds offset;
+#endif
+    bool measuring;
+    struct timespec result;
+    Mode mode;
 };
 
 
-
-
-}
-
-
 // sources
-namespace my_utils_kk4{
 
 inline void progBarNh(const double progress, const bool first_call){
 
@@ -162,37 +185,125 @@ inline void Fps::trigger(){
 }
 
 
-inline StopWatch::StopWatch()
+inline StopWatch::StopWatch(const bool verbose)
     : measuring(false),
-      offset(std::chrono::microseconds(0))
-{}
+#if defined(linux) || defined(__linux) || defined(__linux__)
+      offset({0,0})
+#else
+      offset(std::chrono::nanoseconds(0))
+#endif
+{
+
+#if defined(linux) || defined(__linux) || defined(__linux__)
+    mode = LINUX_CLOCK_GETTIME;
+    if(verbose){
+        std::cerr << "[ INFO] clock_gettime(CLOCK_MONOTONIC_RAW, ...) will be used" << std::endl;
+    }
+#else
+    if(! std::chrono::high_resolution_clock::is_steady){
+        mode = CHRONO_STEADY_CLOCK;
+        if(verbose){
+            std::cerr << yellow
+                      << "[ WARN] std::chrono::high_resolution_clock "
+                      << "is not steady. std::chrono::steady_clock will "
+                      << "be used instead."
+                      << default_style << std::endl;
+        }
+    }else{
+        mode = CHRONO_HIGH_RESOLUTION_CLOCK;
+    }
+#endif
+}
 
 inline StopWatch::~StopWatch(){}
+
+
+inline struct timespec StopWatch::sub(const struct timespec& a, const struct timespec& b){
+    
+    timespec ret;
+    ret.tv_sec = a.tv_sec - b.tv_sec;
+    ret.tv_nsec = a.tv_nsec - b.tv_nsec;
+    if(ret.tv_nsec < 0){
+        ret.tv_sec--;
+        ret.tv_nsec += 1000000000;
+    }
+    return ret;
+}
+
+inline struct timespec StopWatch::add(const struct timespec& a, const struct timespec& b){
+    
+    timespec ret;
+    ret.tv_sec = a.tv_sec + b.tv_sec;
+    ret.tv_nsec = a.tv_nsec + b.tv_nsec;
+    if(ret.tv_nsec >= 1000000000){
+        ret.tv_sec++;
+        ret.tv_nsec -= 1000000000;
+    }
+    return ret;
+}
+
+
+inline double StopWatch::toSec(const struct timespec& t){
+
+    return t.tv_sec + t.tv_nsec * 0.000000001;
+}
 
 
 inline void StopWatch::start(){
 
     if(measuring){
-        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::start() called while already running" << std::endl;
+        std::cerr << red
+                  << "[ERROR] " << __FILE__ << " (line " << __LINE__
+                  << "): StopWatch::start() called while already running"
+                  << default_style << std::endl;
     }
     
     measuring = true;
-    time_start = std::chrono::system_clock::now();
+#if defined(linux) || defined(__linux) || defined(__linux__)
+    clock_gettime(CLOCK_MONOTONIC_RAW, &time_start);
+#else
+    if(mode == CHRONO_HIGH_RESOLUTION_CLOCK){
+        time_start_high_res = std::chrono::high_resolution_clock::now();
+    }else{
+        time_start = std::chrono::steady_clock::now();
+    }
+#endif
 }
 
 
 inline double StopWatch::stop(){
 
+    return toSec(stopTimespec());
+}
+
+inline struct timespec StopWatch::stopTimespec(){
+
     if(! measuring){
-        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::stop() called while not running" << std::endl;
-        return 0;
+        std::cerr << red
+                  << "[ERROR] " << __FILE__ << " (line " << __LINE__
+                  << "): StopWatch::stop() called while not running"
+                  << default_style << std::endl;
+        struct timespec ret = {0,0};
+        return ret;
     }
-    
-    auto elapsed = std::chrono::system_clock::now() - time_start;
-    auto tmp_result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
-    offset = tmp_result;
+#if defined(linux) || defined(__linux) || defined(__linux__)
+    struct timespec now;
+    clock_gettime(CLOCK_MONOTONIC_RAW, &now);
+    offset = add(sub(now, time_start), offset);
     measuring = false;
-    result = tmp_result.count() / (double) 1000000;
+    result = offset;
+#else
+    if(mode == CHRONO_HIGH_RESOLUTION_CLOCK){
+        auto now = std::chrono::high_resolution_clock::now();
+        offset = std::chrono::duration_cast<std::chrono::nanoseconds>(now - time_start_high_res) + offset;
+    }else{
+        auto now = std::chrono::steady_clock::now();
+        offset = std::chrono::duration_cast<std::chrono::nanoseconds>(now - time_start) + offset;
+    }
+    measuring = false;
+    result.tv_sec = static_cast<int>(offset.count() / 1000000000);
+    result.tv_nsec = offset.count() % 1000000000;
+#endif
     return result;
 }
 
@@ -201,41 +312,81 @@ inline double StopWatch::stop(){
 inline void StopWatch::reset(){
 
     if(measuring){
-        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::reset() called while running" << std::endl;
+        std::cerr << red
+                  << "[ERROR] " << __FILE__ << " (line " << __LINE__
+                  << default_style << "): StopWatch::reset() called while running" << std::endl;
     }
-
-    offset = std::chrono::microseconds(0);
+#if defined(linux) || defined(__linux) || defined(__linux__)
+    offset.tv_sec = 0;
+    offset.tv_nsec = 0;
+#else
+    offset = std::chrono::nanoseconds(0);
+#endif
 }
 
 inline double StopWatch::lap(){
 
+    return toSec(lapTimespec());
+}
+
+inline struct timespec StopWatch::lapTimespec(){
+
     if(! measuring){
-        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::lap() called while not running" << std::endl;
-        return 0;
+        std::cerr << red
+                  << "[ERROR] " << __FILE__ << " (line " << __LINE__
+                  << default_style << "): StopWatch::lap() called while not running" << std::endl;
+        struct timespec ret = {0,0};
+        return ret;
     }
-    
-    auto elapsed = std::chrono::system_clock::now() - time_start;
-    auto tmp_result = std::chrono::duration_cast<std::chrono::microseconds>(elapsed) + offset;
-    result = tmp_result.count() / (double) 1000000;
+#if defined(linux) || defined(__linux) || defined(__linux__)
+    struct timespec now;
+    clock_gettime(CLOCK_MONOTONIC_RAW, &now);
+    result = add(sub(now, time_start), offset);
+#else
+    if(mode == CHRONO_HIGH_RESOLUTION_CLOCK){
+        auto now = std::chrono::high_resolution_clock::now();
+        auto tmp_result = std::chrono::duration_cast<std::chrono::nanoseconds>(now - time_start_high_res) + offset;
+        result.tv_sec = static_cast<time_t>(tmp_result.count() / 1000000000);
+        result.tv_nsec = tmp_result.count() % 1000000000;
+    }else{
+        auto now = std::chrono::steady_clock::now();
+        auto tmp_result = std::chrono::duration_cast<std::chrono::nanoseconds>(now - time_start) + offset;
+        result.tv_sec = static_cast<time_t>(tmp_result.count() / 1000000000);
+        result.tv_nsec = tmp_result.count() % 1000000000;
+    }
+#endif
     return result;
 }
 
 inline double StopWatch::interval(){
 
+    return toSec(intervalTimespec());
+}
+
+inline struct timespec StopWatch::intervalTimespec(){
+
     if(! measuring){
-        std::cerr << "[ERROR] " << __FILE__ << " (line " << __LINE__ << "): StopWatch::interval() called while not running" << std::endl;
-        return 0;
+        std::cerr << red
+                  << "[ERROR] " << __FILE__ << " (line " << __LINE__
+                  << default_style << "): StopWatch::interval() called while not running" << std::endl;
+        struct timespec ret = {0,0};
+        return ret;
     }
 
-    double ret = stop();
+    struct timespec ret = stopTimespec();
     reset();
     start();
     return ret;
 }
 
-inline double StopWatch::getResult()const{
+inline struct timespec StopWatch::getResultTimespec()const{
 
     return result;
+}
+
+inline double StopWatch::getResult()const{
+
+    return toSec(result);
 }
 
 
