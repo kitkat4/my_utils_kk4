@@ -12,6 +12,6 @@ add_executable(test_prog_bar_nh examples/test_prog_bar_nh.cpp)
 add_executable(test_fps examples/test_fps.cpp)
 add_executable(test_color examples/test_color.cpp)
 add_executable(test_stop_watch examples/test_stop_watch.cpp)
-
+add_executable(test_split examples/test_split.cpp)
 
 

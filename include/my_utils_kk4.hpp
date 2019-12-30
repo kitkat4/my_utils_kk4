@@ -3,6 +3,7 @@
 #include <chrono>
 #include <time.h>
 #include <string>
+#include <vector>
 #include <iostream>
 
 namespace my_utils_kk4{
@@ -31,6 +32,47 @@ static const std::string magenta_b = "\033[45m";
 static const std::string cyan_b    = "\033[46m";
 static const std::string white_b   = "\033[47m";
 static const std::string default_color_b  = "\033[49m";
+
+
+inline int split(const std::string& in_string, const char delim,
+                 std::vector<std::string> * const result){
+
+    result->clear();
+
+    size_t start_pos = 0;
+    
+    for(size_t i = 0; i < in_string.size(); i++){
+
+        if(in_string[i] == delim){
+
+            result->push_back(in_string.substr(start_pos, i - start_pos));
+            start_pos = i + 1;
+        }
+        
+        if(i == in_string.size() - 1){
+
+            if(in_string[i] == delim){
+                result->push_back(std::string());
+            }else{
+                result->push_back(in_string.substr(start_pos, i - start_pos + 1));
+            }
+        }
+        
+    }
+
+    return result->size();
+}
+
+inline std::vector<std::string> split(const std::string& in_string,
+                                      const char delim){
+
+    std::vector<std::string> ret;
+
+    split(in_string, delim, &ret);
+
+    return ret;
+}
+
 
 
 
