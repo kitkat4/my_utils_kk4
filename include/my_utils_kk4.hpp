@@ -1,3 +1,15 @@
+/*!
+  @file   my_utils_kk4.hpp
+  @author kitkat4 <kitkat4@bowser>
+  @date   Mon Dec 30 23:49:34 2019
+  
+  @brief  My utilities for C++ program.
+  
+  
+*/
+
+
+
 #pragma once
 
 #include <chrono>
@@ -8,12 +20,10 @@
 
 namespace my_utils_kk4{
 
-
-static const std::string default_style = "\033[0m"; 
+static const std::string default_style = "\033[0m";
 static const std::string bold    = "\033[1m";
 static const std::string italic  = "\033[3m";
 static const std::string underline = "\033[4m";
-
 static const std::string black   = "\033[30m";
 static const std::string red     = "\033[31m";
 static const std::string green   = "\033[32m";
@@ -33,7 +43,15 @@ static const std::string cyan_b    = "\033[46m";
 static const std::string white_b   = "\033[47m";
 static const std::string default_color_b  = "\033[49m";
 
-
+//! 
+/*! 
+  Function to split a string.
+  @param [in] in_string Input string
+  @param [in] delim Delimiter
+  @param [out] result Split strings
+  
+  @return The size of result.
+*/
 inline int split(const std::string& in_string, const char delim,
                  std::vector<std::string> * const result){
 
@@ -63,6 +81,14 @@ inline int split(const std::string& in_string, const char delim,
     return result->size();
 }
 
+//! 
+/*! 
+  Function to split a string.
+  @param [in] in_string Input string
+  @param [in] delim Delimiter
+  
+  @return Split strings
+*/
 inline std::vector<std::string> split(const std::string& in_string,
                                       const char delim){
 
@@ -146,6 +172,12 @@ private:
 
 // sources
 
+//! 
+/*! 
+  Function to show a progress bar.
+  @param [in] progress Progress, must be within [0.0, 1.0].
+  @param [in] first_call Set true when call it for the first time.
+*/
 inline void progBarNh(const double progress, const bool first_call){
 
     double prog;
@@ -186,7 +218,11 @@ inline void progBarNh(const double progress, const bool first_call){
     return;
 }
 
-// Constructor
+//! 
+/*! 
+  Constructor.
+  @param [in] update_interval An interval to update fps (in seconds).
+*/
 inline Fps::Fps(double update_interval)
     : elapsed_time_after_last_update(std::chrono::microseconds(0)),
       events_num_after_last_update(0),
@@ -195,11 +231,17 @@ inline Fps::Fps(double update_interval)
       fps(0.0){
 }
 
-// Destructor
+//! 
+/*! 
+  Destructor.
+*/
 inline Fps::~Fps(){
 }
 
-
+//! 
+/*! 
+  Function to let the object know that the event happend.
+ */
 inline void Fps::trigger(){
 
     
@@ -227,6 +269,11 @@ inline void Fps::trigger(){
 }
 
 
+//! 
+/*! 
+  Constructor.
+  @param verbose Set true to show more information.
+*/
 inline StopWatch::StopWatch(const bool verbose)
     : measuring(false),
 #if defined(linux) || defined(__linux) || defined(__linux__)
@@ -257,9 +304,21 @@ inline StopWatch::StopWatch(const bool verbose)
 #endif
 }
 
+
+//! 
+/*! 
+  Destructor.
+*/
 inline StopWatch::~StopWatch(){}
 
-
+//! 
+/*! 
+  Subtract timespec b from timespec a.
+  @param [in] a 
+  @param [in] b 
+  
+  @return Resultant value.
+*/
 inline struct timespec StopWatch::sub(const struct timespec& a, const struct timespec& b){
     
     timespec ret;
@@ -272,6 +331,14 @@ inline struct timespec StopWatch::sub(const struct timespec& a, const struct tim
     return ret;
 }
 
+//! 
+/*! 
+  Add timespec a to timespec b.
+  @param [in] a 
+  @param [in] b 
+  
+  @return Resultant value.
+*/
 inline struct timespec StopWatch::add(const struct timespec& a, const struct timespec& b){
     
     timespec ret;
@@ -284,13 +351,22 @@ inline struct timespec StopWatch::add(const struct timespec& a, const struct tim
     return ret;
 }
 
-
+//! 
+/*! 
+  Convert timespec to seconds.
+  @param t [in] Time of timespec type.
+  
+  @return 
+*/
 inline double StopWatch::toSec(const struct timespec& t){
 
     return t.tv_sec + t.tv_nsec * 0.000000001;
 }
 
-
+//! 
+/*! 
+  Start the stopwatch.
+ */
 inline void StopWatch::start(){
 
     if(measuring){
@@ -312,12 +388,23 @@ inline void StopWatch::start(){
 #endif
 }
 
-
+//! 
+/*! 
+  Stop the stopwatch.
+  
+  @return Current value in seconds.
+*/
 inline double StopWatch::stop(){
 
     return toSec(stopTimespec());
 }
 
+//! 
+/*! 
+  Stop the stopwatch.
+  
+  @return Current value of timespec type.
+*/
 inline struct timespec StopWatch::stopTimespec(){
 
     if(! measuring){
@@ -350,7 +437,10 @@ inline struct timespec StopWatch::stopTimespec(){
 }
 
 
-
+//! 
+/*! 
+  Reset the current value.
+ */
 inline void StopWatch::reset(){
 
     if(measuring){
@@ -366,11 +456,23 @@ inline void StopWatch::reset(){
 #endif
 }
 
+//! 
+/*! 
+  Get the lap time.
+  
+  @return Lap time in seconds.
+*/
 inline double StopWatch::lap(){
 
     return toSec(lapTimespec());
 }
 
+//! 
+/*! 
+  Get the lap time.
+  
+  @return Lap time in timepsec.
+*/
 inline struct timespec StopWatch::lapTimespec(){
 
     if(! measuring){
@@ -400,11 +502,23 @@ inline struct timespec StopWatch::lapTimespec(){
     return result;
 }
 
+//! 
+/*! 
+  Get and reset the current value and start the stopwatch again.
+  
+  @return The current value in seconds.
+*/
 inline double StopWatch::interval(){
 
     return toSec(intervalTimespec());
 }
 
+//! 
+/*! 
+  Get and reset the current value and start the stopwatch again.
+  
+  @return The current vlaue of timespec type.
+*/
 inline struct timespec StopWatch::intervalTimespec(){
 
     if(! measuring){
@@ -421,11 +535,24 @@ inline struct timespec StopWatch::intervalTimespec(){
     return ret;
 }
 
+
+//! 
+/*! 
+  Get the last result.
+  
+  @return The last result of timespec type.
+*/
 inline struct timespec StopWatch::getResultTimespec()const{
 
     return result;
 }
 
+//! 
+/*! 
+  Get the last result.
+  
+  @return The last result in seconds.
+*/
 inline double StopWatch::getResult()const{
 
     return toSec(result);
