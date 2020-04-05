@@ -43,6 +43,7 @@ static const std::string cyan_b    = "\033[46m";
 static const std::string white_b   = "\033[47m";
 static const std::string default_color_b  = "\033[49m";
 
+
 //! 
 /*! 
   Function to split a string.
@@ -100,11 +101,6 @@ inline std::vector<std::string> split(const std::string& in_string,
 }
 
 
-
-
-void progBarNh(const double progress, const bool first_call);
-
-
 class Fps{
 public:
     Fps(double update_interval = 1);
@@ -114,7 +110,7 @@ public:
         return fps;
     }
 private:
-    std::chrono::system_clock::time_point time_of_last_event;
+    std::chrono::steady_clock::time_point time_of_last_event;
     std::chrono::microseconds elapsed_time_after_last_update;
     int events_num_after_last_update;
     bool no_events_yet;
@@ -204,9 +200,9 @@ inline void Fps::trigger(){
     
     if(no_events_yet){          // fist call
         no_events_yet = false;
-        time_of_last_event = std::chrono::system_clock::now();
+        time_of_last_event = std::chrono::steady_clock::now();
     }else{                      // calls after the second
-        std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+        std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
 
         elapsed_time_after_last_update +=
             std::chrono::duration_cast<std::chrono::microseconds>(now - time_of_last_event);
