@@ -13,5 +13,6 @@ add_executable(test_fps examples/test_fps.cpp)
 add_executable(test_color examples/test_color.cpp)
 add_executable(test_stop_watch examples/test_stop_watch.cpp)
 add_executable(test_split examples/test_split.cpp)
+add_executable(test_newton_raphson_method examples/test_newton_raphson_method.cpp)
 
 

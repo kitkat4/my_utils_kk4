@@ -17,6 +17,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <functional>
 
 namespace my_utils_kk4{
 
@@ -42,6 +43,48 @@ static const std::string magenta_b = "\033[45m";
 static const std::string cyan_b    = "\033[46m";
 static const std::string white_b   = "\033[47m";
 static const std::string default_color_b  = "\033[49m";
+
+
+inline double newtonRaphsonMethod(const std::function<double(double)>& func_x,
+                                  const std::function<double(double)>& func_x_derivative,
+                                  const double epsilon_x,
+                                  const size_t max_iteration,
+                                  const double init_guess_x,
+                                  size_t * const iteration_num,
+                                  bool * const converged){
+    
+    double x = init_guess_x;
+
+    for(size_t i = 0; i < max_iteration; i++){
+
+        const double delta_x =  - func_x(x) / func_x_derivative(x);
+
+        x += delta_x;
+
+        if(std::abs(delta_x) < epsilon_x){
+            
+            if(iteration_num){
+                *iteration_num = i + 1;
+            }
+            
+            if(converged){
+                *converged = true;
+            }
+
+            return x;
+        }
+    }
+
+    if(iteration_num){
+        *iteration_num = max_iteration;
+    }
+            
+    if(converged){
+        *converged = false;
+    }
+
+    return x;
+}
 
 
 //! 
