@@ -1,7 +1,7 @@
 # coding: utf-8
 
+import numpy as np
 import sys
-
 import time
 
 
@@ -28,6 +28,46 @@ magenta_b = "\033[45m"
 cyan_b    = "\033[46m"
 white_b   = "\033[47m"
 default_color_b  = "\033[49m"
+
+class TransformEstimatorFromMovedPoints:
+
+    def __init__(self):
+        self.tl_estimated = None
+        self.rot_estimated = None
+        self.org_samples = None
+        self.moved_samples = None
+
+    def set_samples(self, org_samples, moved_samples):
+
+        if org_samples.shape != moved_samples.shape:
+            raise RuntimeError('The sizes of original samples and moved samples does not match')
+        
+        self.org_samples = org_samples
+        self.moved_samples = moved_samples
+
+    def estimate(self, is_alibi):
+        org_samples_center = np.mean(self.org_samples, axis=1).reshape((3, 1))
+        moved_samples_center = np.mean(self.moved_samples, axis=1).reshape((3, 1))
+
+        org_samples_offset = self.org_samples - org_samples_center
+        moved_samples_offset = self.moved_samples - moved_samples_center
+
+        sum_direct_product_org_org = np.dot(org_samples_offset, org_samples_offset.T)
+        sum_direct_product_moved_org = np.dot(moved_samples_offset, org_samples_offset.T)
+
+        rot_estimated = np.dot(sum_direct_product_moved_org,
+                               np.linalg.inv(sum_direct_product_org_org))
+        tl_estimated = moved_samples_center - np.dot(rot_estimated, org_samples_center)
+
+
+        if not is_alibi:
+            rot_estimated = rot_estimated.T
+            tl_estimated = np.dot(rot_estimated, -tl_estimated)
+            
+        self.tl_estimated = tl_estimated
+        self.rot_estimated = rot_estimated
+            
+        return (self.tl_estimated, self.rot_estimated)
 
 
 class Fps:
